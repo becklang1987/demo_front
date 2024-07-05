@@ -5,7 +5,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 // 提供静态文件服务
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(__dirname));
 
 // "catchall" 处理：对于所有其他请求，返回 index.html
 app.get('*', (req, res) => {

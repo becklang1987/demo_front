@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from'react-redux';
-import store from './store';
 import {createBrowserRouter,RouterProvider,redirect} from 'react-router-dom'
 import Login from './pages/login/login'
 import PrivateRoute from './components/PrivateRoutes/privateRoutes';
@@ -30,11 +29,9 @@ const browserRouter = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
     <RouterProvider router={browserRouter}>
     <App />
     </RouterProvider>
-    </Provider>
   </React.StrictMode>
 );
 
