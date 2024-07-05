@@ -16,6 +16,7 @@ phases:
       - echo Copying files to build folder
       - mv package_for_build.json build/package.json
       - cp package-lock.json build/
+      - cp app.js build/
       - cd build
       - zip build.zip * -x "node_modules/*"
       - echo Build completed

@@ -1,5 +1,5 @@
 const url = {
-    api: 'https://1528-103-232-212-83.ngrok-free.app'
+    api: 'https://6c88-156-224-31-84.ngrok-free.app'
 }
 
 export default url

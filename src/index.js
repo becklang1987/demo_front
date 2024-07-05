@@ -15,6 +15,10 @@ const browserRouter = createBrowserRouter([
     element: <Login />
   },
   {
+    path: '/',
+    element: <Login />
+  },
+  {
     path: '/callback',
     element: <Callback />
   },
