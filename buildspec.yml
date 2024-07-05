@@ -1,0 +1,24 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+  pre_build:
+    commands:
+      - echo Build started 
+  build:
+    commands:
+      - echo Building wechat_backend:v1.1
+      - npm install
+      - npm run build
+  post_build:
+    commands:
+      - echo Copying files to build folder
+      - mv package_for_build.json build/package.json
+      - cp package-lock.json build/
+      - cd build
+      - zip build.zip * -x "node_modules/*"
+      - echo Build completed
+artifacts:
+  files: 
+    - 'build/build.zip'
